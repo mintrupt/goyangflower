@@ -16,14 +16,18 @@ namespace AutoImage
             new Program().Start();
         }
 
-        public Regex UidRegex { get; set; }
+        public Regex UidRegex1 { get; set; }
+        public Regex UidRegex2 { get; set; }
 
         void Start()
         {
-            var pattern = "all;\">([0-9A-Za-z.]+)</strong>.+?uid%3D(.+?)\"";
-            UidRegex = new Regex(pattern);
+            var pattern1 = "all;\">([0-9A-Za-z.]+)</strong>.+?uid%3D(.+?)\"";
+            UidRegex1 = new Regex(pattern1);
 
-            var sources = Enumerable.Range(0, 7);
+            var pattern2 = "title=\"([0-9A-Za-z.]+)\".+?fid=(.+?)\"";
+            UidRegex2 = new Regex(pattern2);
+
+            var sources = Enumerable.Range(0, 11);
             foreach (var source in sources)
             {
                 Directory.CreateDirectory("Image/" + source);
@@ -33,6 +37,11 @@ namespace AutoImage
 
         void ProcessFile(string mailContent, string d)
         {
+            if (mailContent.Length == 0)
+            {
+                return;
+            }
+
             var startFormat = "Content-Type: text/html; charset=UTF-8" + Environment.NewLine
                 + "Content-Transfer-Encoding: base64";
             var endFormat = "------=_Part";
@@ -44,15 +53,26 @@ namespace AutoImage
             var bytes = Convert.FromBase64String(base64);
             var html = Encoding.UTF8.GetString(bytes);
 
-            var matches = UidRegex.Matches(html);
+            var matches1 = UidRegex1.Matches(html);
+            var matches2 = UidRegex2.Matches(html);
 
             List<Tuple<string, string>> tasks = new List<Tuple<string, string>>();
 
+            var format1 = "http://bigmail.mail.daum.net/Mail-bin/bigfile_down?uid={0}";
+            var format2 = "http://xbigfile.naver.com/bigfileupload/download?fid={0}";
+            var format = format1;
+            var matches = matches1;
+
+            if (matches1.Count == 0)
+            {
+                matches = matches2;
+                format = format2;
+            }
+
             foreach (Match match in matches)
             {
-                var uid = match.Groups[2];
-                var format = "http://bigmail.mail.daum.net/Mail-bin/bigfile_down?uid={0}";
-                var href = string.Format(format, uid);
+                var id = match.Groups[2];
+                var href = string.Format(format, id);
                 var name = match.Groups[1].Value;
 
                 tasks.Add(new Tuple<string, string>(href, name));
