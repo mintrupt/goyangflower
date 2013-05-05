@@ -23,7 +23,7 @@ namespace AutoImage
             var pattern = "all;\">([0-9A-Za-z.]+)</strong>.+?uid%3D(.+?)\"";
             UidRegex = new Regex(pattern);
 
-            var sources = Enumerable.Range(0, 11);
+            var sources = Enumerable.Range(4, 5);
             foreach (var source in sources)
             {
                 Directory.CreateDirectory("Image/" + source);
