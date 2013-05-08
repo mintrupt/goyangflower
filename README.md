@@ -1,21 +1,21 @@
-goyangflower
+ï»¿goyangflower
 ============
 
 ## AutoImage
-²É »çÁø ÆÄÀÏÀÌ ³Ê¹« ¸¹¾Æ¼­ ¸¸µç ´ë¿ë·® Ã·ºÎÆÄÀÏ ¹èÄ¡ ´Ù¿î·Î´õ
+ê½ƒ ì‚¬ì§„ íŒŒì¼ì´ ë„ˆë¬´ ë§Žì•„ì„œ ë§Œë“  ëŒ€ìš©ëŸ‰ ì²¨ë¶€íŒŒì¼ ë°°ì¹˜ ë‹¤ìš´ë¡œë”
 
 ## com.mintrupt.goyang.flower
-PhoneGap ±â¹Ý Android ¾ÖÇÃ¸®ÄÉÀÌ¼Ç
+PhoneGap ê¸°ë°˜ Android ì• í”Œë¦¬ì¼€ì´ì…˜
 
 ## com.mintrupt.goyang.flower/assets/www
-½ÇÁ¦ ÇÏÀÌºê¸®µå ¾Û ±¸Çö
+ì‹¤ì œ í•˜ì´ë¸Œë¦¬ë“œ ì•± êµ¬í˜„
 
 ## vision
-Áöµµ ÁÂÇ¥ º¯È¯ Çà·Ä °è»ê
+ì§€ë„ ì¢Œí‘œ ë³€í™˜ í–‰ë ¬ ê³„ì‚°
 
 ## flowers
-²É »çÁø. ³Ê¹« ¾çÀÌ ¸¹¾Æ¼­ Á¦¿Ü.
+ê½ƒ ì‚¬ì§„. ë„ˆë¬´ ì–‘ì´ ë§Žì•„ì„œ ì œì™¸.
 
 ## web
-ÇÊ¿äÇÏ´Ù¸é À¥ ¾ÛÀ¸·Î ¹Ù²Ü ¼öµµ ÀÖ½À´Ï´Ù.
-http://goyang.semteo.co.kr:600/ À¸·Î ¼öµ¿À¸·Î µ¿±âÈ­ÇÏ°í ÀÖ½À´Ï´Ù.
+í•„ìš”í•˜ë‹¤ë©´ ì›¹ ì•±ìœ¼ë¡œ ë°”ê¿€ ìˆ˜ë„ ìžˆìŠµë‹ˆë‹¤.
+http://goyang.semteo.co.kr:600/ ìœ¼ë¡œ ìˆ˜ë™ìœ¼ë¡œ ë™ê¸°í™”í•˜ê³  ìžˆìŠµë‹ˆë‹¤.
