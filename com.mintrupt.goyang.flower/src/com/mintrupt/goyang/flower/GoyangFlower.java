@@ -21,8 +21,10 @@ package com.mintrupt.goyang.flower;
 
 import android.os.Bundle;
 import org.apache.cordova.*;
+/*
 import android.webkit.WebSettings;
 import android.webkit.WebSettings.ZoomDensity;
+*/
 
 public class GoyangFlower extends DroidGap {
 	@Override
